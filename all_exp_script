@@ -1,0 +1,162 @@
+#!/bin/bash
+
+# command & disown
+# by appending "& disown" to a command the command is started detached from your script. 
+# This has the effect that the script will not wait for the command to finish and the command will not be killed when the script is finished.
+
+
+# start
+cd /home/datascienceadmin/hashim/iguana_14th_november/Iguana_Release
+# start iguana
+./start-iguana.sh & disown
+# wait for a minute to make sure it is really up and running
+sleep 1m
+
+
+### run benchmarks for sp2b + virtuoso
+
+
+## start virutoso / fuseki with sp2banch / watDiv dataset
+# jump into virtuoso / fuseki folder
+#cd /home/datascienceadmin/hashim/sp2bench/sp2bench-virtuoso7.2.4.linux.fixed/bin
+cd /home/datascienceadmin/hashim/fuseki_data/apache-jena-fuseki-3.13.1
+#./start_virtuoso.sh & disown
+./fuseki-server --loc=../dbpedia/dbpediaData /dbpediaSBM & disown 
+# make sure virtuoso had enough time to start up
+sleep 2m
+# jump back to the IGUANA folder
+cd -
+
+## start benchmarking
+#./send-config.sh iguana-dbpediaSBM-fuseki-1.config & disown
+# wait until benchmarking is finished. 
+#sleep 65m
+
+# start benchmarking
+#./send-config.sh iguana-dbpediaSBM-fuseki-2.config & disown
+# wait until benchmarking is finished. 
+#sleep 65m
+
+# start benchmarking
+#./send-config.sh iguana-dbpediaSBM-fuseki-4.config & disown
+# wait until benchmarking is finished. 
+#sleep 65m
+
+# ... the same for 8,16,32
+
+# start benchmarking
+#./send-config.sh iguana-dbpediaSBM-fuseki-8.config & disown
+# wait until benchmarking is finished. 
+#sleep 65m
+
+# start benchmarking
+#./send-config.sh iguana-dbpediaSBM-fuseki-16.config & disown
+# wait until benchmarking is finished. 
+#sleep 65m
+
+# start benchmarking
+#./send-config.sh iguana-dbpediaSBM-fuseki-32.config & disown
+# wait until benchmarking is finished. 
+#sleep 65m
+
+# start benchmarking
+#./send-config.sh iguana-dbpediaSBM-fuseki-64.config & disown
+# wait until benchmarking is finished. 
+#sleep 65m
+
+# start benchmarking
+#./send-config.sh iguana-dbpediaSBM-fuseki-128.config & disown
+# wait until benchmarking is finished. 
+#sleep 65m
+
+# shut virtuoso down
+#pkill fuseki
+#sleep 1m
+#rm -r queryInstances
+#rm suit*
+#mv res* fuseki_dbpediaSBM_1_to_128.nt
+#mv fuseki_ld* /home/datascienceadmin/hashim/iguana_14th_november/Iguana_Release/FUSEKI_RZLT/
+#sleep 2m
+
+### run benchmarks for sp2b + fuseki
+#!/bin/bash
+
+# command & disown
+# by appending "& disown" to a command the command is started detached from your script. 
+# This has the effect that the script will not wait for the command to finish and the command will not be killed when the script is finished.
+
+
+# start
+#cd /home/datascienceadmin/hashim/iguana_14th_november/Iguana_Release
+# start iguana
+#./start-iguana.sh & disown
+# wait for a minute to make sure it is really up and running
+#sleep 1m
+
+
+### run benchmarks for sp2b + virtuoso
+
+
+## start virutoso with watDiv dataset
+# jump into virtuoso folder
+#cd /home/datascienceadmin/hashim/ldbc_snb/ldbc-snb-virtuoso7.2.4.linux.fixed/bin
+
+#./start_virtuoso.sh & disown
+# make sure virtuoso had enough time to start up
+#sleep 2m
+# jump back to the IGUANA folder
+#cd /home/datascienceadmin/hashim/iguana_14th_november/Iguana_Release
+
+## start benchmarking
+./send-config.sh iguana-dbpediaFEASIBLE-fuseki-1.config & disown
+# wait until benchmarking is finished. 
+sleep 65m
+
+# start benchmarking
+./send-config.sh iguana-dbpediaFEASIBLE-fuseki-2.config & disown
+# wait until benchmarking is finished. 
+sleep 65m
+
+# start benchmarking
+./send-config.sh iguana-dbpediaFEASIBLE-fuseki-4.config & disown
+# wait until benchmarking is finished. 
+sleep 65m
+
+# ... the same for 8,16,32
+
+# start benchmarking
+./send-config.sh iguana-dbpediaFEASIBLE-fuseki-8.config & disown
+# wait until benchmarking is finished. 
+sleep 65m
+
+
+# start benchmarking
+./send-config.sh iguana-dbpediaFEASIBLE-fuseki-16.config & disown
+# wait until benchmarking is finished. 
+sleep 65m
+
+# start benchmarking
+./send-config.sh iguana-dbpediaFEASIBLE-fuseki-32.config & disown
+# wait until benchmarking is finished. 
+sleep 65m
+
+# start benchmarking
+./send-config.sh iguana-dbpediaFEASIBLE-fuseki-64.config & disown
+# wait until benchmarking is finished. 
+sleep 65m
+
+# start benchmarking
+./send-config.sh iguana-dbpediaFEASIBLE-fuseki-128.config & disown
+# wait until benchmarking is finished. 
+sleep 65m
+
+# shut virtuoso down
+#pkill virtuoso
+#sleep 1m
+rm -r queryInstances
+rm suit*
+mv res* fuseki_dbpediaFEASIBLE_1_to_128.nt
+mv fuseki_dbp* /home/datascienceadmin/hashim/iguana_14th_november/Iguana_Release/FUSEKI_RZLT/
+
+
+
