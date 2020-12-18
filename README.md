@@ -1,4 +1,4 @@
-## When to Reach the Peak Performance Point? An Analysis of RDF Triplestores
+## When is the Peak Performance Reached? AnAnalysis of RDF Triplestores
 We performed an extensive experiments to show the query processing capabilities of well-known triple stores by using their SPARQL endpoints. In particular, we stress these triple stores with multiple parallel requests from different querying agents. Our experiments revealed the maximum query processing capabilities of these triplestores after that it may leads to denial of service (DoS) attacks. We hope this analysis will help triplestores developers to design workload-aware RDF engines to improve the availability of their public endpoints, by avoiding the DOS attacks.
 ### Persistent URI, Licence:
 All of the data and results presented in our evaluation are available online from https://github.com/dice-group/RDF-Triplestores-Evaluation under [Apache License 2.0](https://github.com/dice-group/RDF-Triplestores-Evaluation/blob/master/LICENSE) .
