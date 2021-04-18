@@ -22,8 +22,9 @@ We used [IGUANA](https://svn.aksw.org/papers/2017/ISWC_Iguana/public.pdf), a ben
 
 *  `connection1.service=http://localhost:8895/sparql` set the SPARQL endpoint address.
 * `connection1.update.service=http://localhost:8895/sparql` (optional) used for update/write operations. In our case only read operations (queries) are used, but not write. Therefore it is disabled (commented).             
-* `sparqlConfig1=<variable>, org.aksw.iguana.tp.tasks.impl.stresstest.worker.impl.SPARQLWorker, 180000, <path/to/queries.txt file>, 0, 0`
-- Here `<variable>` shows number of workers, i.e., 1, 2, 4, 8, 16, 32, 64, 128 and 600000 milli second = 10 minutes is query time out, the stresstestArg.timeLimit=3600000 (in milli seconds, 1 hour, time to complete one experiment). 
+* `sparqlConfig1=<variable>, org.aksw.iguana.tp.tasks.impl.stresstest.worker.impl.SPARQLWorker, 600000, <path/to/queries.txt file>, 0, 0`
+- Here `<variable>` shows the No. of workers, i.e., 1, 2, 4, 8, 16, 32, 64, 128 and 600000 milli second = 10 minutes is query timeout, 
+- The stresstestArg.timeLimit=3600000 (in milli seconds, 1 hour, time to complete one experiment). 
 
 
 Once the config file is ready, then start experiment by following below steps:
