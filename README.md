@@ -25,6 +25,7 @@ We used [IGUANA](https://svn.aksw.org/papers/2017/ISWC_Iguana/public.pdf), a ben
 * `sparqlConfig1=<variable>, org.aksw.iguana.tp.tasks.impl.stresstest.worker.impl.SPARQLWorker, 600000, <path/to/queries.txt file>, 0, 0`
 - Here `<variable>` shows the No. of workers, i.e., 1, 2, 4, 8, 16, 32, 64, 128 and 600000 milli second = 10 minutes is query timeout, 
 - The stresstestArg.timeLimit=3600000 (in milli seconds, 1 hour, time to complete one experiment). 
+- _All the experiments are read based, therefore the update component of IGUANA is disabled (commented)_.
 
 
 Once the config file is ready, then start experiment by following below steps:
