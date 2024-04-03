@@ -46,6 +46,12 @@ All the results obtained were in `.nt` format, but we converted them to `CSV`, a
 
 [WatDiv-10-Million triples results](https://github.com/dice-group/RDF-Triplestores-Evaluation/tree/master/watDiv_10_Million_results)
 
+### Publication
+
+Our findings and methodologies are detailed in the following publication:
+- Khan, H., Ali, M., Ngonga Ngomo, A.-C., & Saleem, M. (2021). *When is the Peak Performance Reached?
+An Analysis of RDF Triple Stores*. Semantics-2021, [Link to the paper]([URL](https://papers.dice-research.org/2021/SEMANTICS2021_TripleStoresEvaluation/public.pdf))
+
 ### Authors:
 * [Hashim Khan](https://dice-research.org/HashimKhan) (DICE, Paderborn University)
 * [Manzoor Ali](https://dice-research.org/ManzoorAli) (DICE, Paderborn University)
