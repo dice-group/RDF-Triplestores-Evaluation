@@ -64,7 +64,7 @@ An Analysis of RDF Triple Stores*. Semantics-2021, [Link to the paper](https://p
   year={2021},
   organization={IOS Press}
 }
-```bibtex
+```
 
 ### Authors:
 * [Hashim Khan](https://dice-research.org/HashimKhan) (DICE, Paderborn University)
