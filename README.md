@@ -54,7 +54,8 @@ An Analysis of RDF Triple Stores*. Semantics-2021, [Link to the paper](https://p
 
 ### Citing:
 
-`@inproceedings{hashim2021peak,
+```bibtex
+@inproceedings{hashim2021peak,
   title={When is the Peak Performance Reached? An Analysis of RDF Triple Stores},
   author={Hashim Khan, Manzoor Ali and Ngomo, Axel-Cyrille Ngonga and Saleem, Muhammad},
   booktitle={Further with Knowledge Graphs: Proceedings of the 17th International Conference on Semantic Systems, 6-9 September 2021, Amsterdam, The Netherlands},
@@ -62,7 +63,7 @@ An Analysis of RDF Triple Stores*. Semantics-2021, [Link to the paper](https://p
   pages={154},
   year={2021},
   organization={IOS Press}
-}`
+}
 
 
 ### Authors:
